@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import Display from './components/Display';
+import Dashboard from './components/Dashboard';
+
 function App() {
   const [ball, setBall] = useState(0);
   const [strike, setStrike] = useState(0);
@@ -40,17 +43,8 @@ function App() {
           Baseball Stadium Pesonnel
         </h2>
       </header>
-      <div className="display">
-        <h3>Display</h3>
-        <p>Ball: {ball}</p>
-        <p>Strike: {strike}</p>
-      </div>
-      <div className="dashboard">
-        <button onClick={strikeBtn}>Strike</button>
-        <button onClick={ballBtn}>Ball</button>
-        <button onClick={foulBtn}>Foul</button>
-        <button onClick={hitBtn}>Hit</button>
-      </div>
+      <Display ball={ball} strike={strike}/>
+      <Dashboard strikeBtn={strikeBtn} ballBtn={ballBtn} foulBtn={foulBtn} hitBtn={hitBtn}/>
     </div>
   );
 }
