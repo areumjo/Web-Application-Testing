@@ -39,9 +39,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>
-          Baseball Stadium Pesonnel
-        </h2>
+        <h2>Baseball Stadium Pesonnel</h2>
       </header>
       <Display ball={ball} strike={strike}/>
       <Dashboard strikeBtn={strikeBtn} ballBtn={ballBtn} foulBtn={foulBtn} hitBtn={hitBtn}/>
